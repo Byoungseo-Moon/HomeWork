@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            /* float: left; */
+            width: 350px;
+            /* 화면크기에 따라 변하지 않는다*/
+            display: flex;
+            height: 350px;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+            background-color: #ccc;
+            border: 2px, solid, black;
+
+        }
+
+        .box {
+            width: 100px;
+            margin: 5px;
+            padding: 5px 20px;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+
+        .order1 {
+            /*위를 기준으로 아래로 정리함*/
+            align-items: flex-start;
+        }
+
+        .order2 {
+            /*아래를 기준으로 위로 정리함*/
+            align-items: flex-end;
+        }
+
+        .order3 {
+            /*중앙으로 정리함*/
+            align-items: center;
+        }
+
+        .order4 {
+            /*위를 기준으로 아래로 정리함*/
+            align-content: flex-start;
+        }
+
+        .order5 {
+            /*위를 기준으로 아래로 정리함*/
+            align-content: space-around;
+            /* space-between, space-evenly*/
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="container" class="order5">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 400px;
+            border: 2px solide black;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fill {
+            /*이미지의 비율은 무시하고 웹화면에 무조건 꽉채움*/
+            object-fit: fill;
+        }
+
+        .contain {
+            /*이미지의 비율은 유지하고  밖(부모)에 있는 요소크기에 맞춘다*/
+            object-fit: contain;
+        }
+
+        .cover {
+            /*이미지의 비율은 유지하고  요소크기에 맞추다보니 짤리는 이미지 부분이 있다*/
+            object-fit: cover;
+        }
+
+        .none {
+            /*이미지 원래크기 유지하고 요소크기에 맞추다보니 짤리는 이미지 부분이 있다*/
+            object-fit: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <img src="../그림2.webp" class="fill">
+</body>
+
+</html>

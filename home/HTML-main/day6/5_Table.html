@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contents">
+
+    </div>
+    <div>
+        <button onclick="fnTable()">테이블생성</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function fnTable() {
+        let table = document.createElement("table"); //<table></table>
+        let num = 1;
+        for (let j = 0; j < 3; j++) {
+            let row = document.createElement("tr"); //<tr></tr>
+            for (let i = 1; i <= 5; i++) {
+                let column = document.createElement("td");
+                column.innerHTML = num++;
+                row.appendChild(column);
+            }
+            table.appendChild(row);
+        }
+
+        let contents = document.querySelector("#contents");
+        contents.appendChild(table);
+
+    }
+
+</script>

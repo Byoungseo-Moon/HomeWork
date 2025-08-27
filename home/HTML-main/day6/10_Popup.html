@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="fnPopup()">팝업!</button>
+
+    </div>
+</body>
+
+</html>
+<script>
+    console.log("availWidth ======> ", screen.availWidth);
+    console.log("availHeight ======> ", screen.availHeight);
+    let top = (screen.availHeight - 300) / 2;
+    let left = (screen.availWidth - 400) / 2;
+
+    function fnPopup() {
+        // 첫파라미터 : 팝업을 띄울 주소, 파일
+        // 둘째 파라미터 : 팝업의 이름 - 동일 이름의 팝업은 출력되지 않음
+        // 셋째 파라미터 : 크기(width, height) 및 위치(left, top ...)
+        window.open("../day5/20_Script.html", "Popup1", `width=400, height=300, left=${left}, top=${top}`); // 버튼 누르면 새로운 창에서 열림
+
+    }
+</script>

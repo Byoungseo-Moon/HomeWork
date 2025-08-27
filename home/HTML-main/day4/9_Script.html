@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>입력 숫자 : <input type="text" id="num"></label>
+
+    </div>
+
+    <div>
+        <button onclick="fnNum()">판별</button>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function fnNum() {
+        let num = document.querySelector("#num").value;
+
+        if ((num % 2 == 0)) {
+            alert("짝수!")
+        } else {
+            alert("홀수!")
+        }
+    }
+
+
+</script>

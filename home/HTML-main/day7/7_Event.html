@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="txt">자바</div>
+    <div class="txt">자바1</div>
+    <div class="txt">자바22</div>
+    <div class="txt">자바333</div>
+    <div class="txt">자바4444</div>
+</body>
+
+</html>
+<script>
+    let list = document.querySelectorAll(".txt");
+    for (let i = 0; i < list.length; i++) {
+        list[i].onclick = function (e) { // ()=>{}는 this를 지원하지 않음
+            alert(e.target.innerHTML) //e.target은 this와 같음
+            // alert(this.innerHTML);
+            this.style.color = "red";
+        }
+    }
+</script>

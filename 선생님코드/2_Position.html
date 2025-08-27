@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px dashed black;
+            text-align: center;
+            line-height: 200px;    
+            box-sizing: border-box; /* border등을 포함해서 전체 크기를 width, height에 맞게 */
+            color: white;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: blue;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+        .box3 {
+            background-color: green;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+
+        .cat {
+            float: left;
+            border-radius: 50%;
+            
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: none ;
+            border-radius: none;
+            float: left;
+            position: absolute;
+            left: 75px;
+            top: 25px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- position의 absolute는 부모 요소의 영향을 받아서 배치 -->
+    <!-- 부모(상위) 요소중에서 static이 아닌 요소를 기준으로 배치  -->
+    <!-- 부모(상위) 요소가 모두 static이면 body를 기준으로 배치 -->
+    <!-- 보통 relative랑 조합해서 많이 사용한다. -->
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <br><br><br>
+    <div style="width: 600px; height: 300px; position: relative;">
+        <!-- <div class="box3">box3</div> -->
+         <div class="box4">box4</div>
+        <img src="./고양이.png" width="150" height="150" class="cat">
+       
+    </div>
+    
+</body>
+</html>

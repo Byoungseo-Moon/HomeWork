@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header1 {
+            height: 90px;
+            background-color: blue;
+            text-align: center;
+            line-height: 90px;
+            color: white;
+        }
+
+        .header2 {
+            height: 50px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+        }
+
+        #container {
+            width: 600px;
+            margin: 10px auto;
+            display: flex;
+        }
+
+        #container1 {
+            display: flex;
+        }
+
+        .header3 {
+            height: 60px;
+            background-color: rgb(40, 40, 183);
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+
+        }
+
+        .h-box {
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+
+        .small {
+            width: 120px;
+            height: 140px;
+            margin-left: 2px;
+        }
+
+        /* #prod-pic,
+        #desc {
+            float: left;
+        } */
+
+        #desc {
+            width: 300px;
+            margin-top: 20px;
+            /* align-items: left; */
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header1">
+        <div style="font-size: 30px;">상품 상세 페이지</div>
+    </div>
+    <div class="header2">
+        <div style="font-size: 20px;">정말~~~ 좋은 자바 프로그래밍 책을 만나보세요!</div>
+    </div>
+    <div id="container1" class="header3">
+        <div class="h-box">홈</div>
+        <div class="h-box">카테고리</div>
+        <div class="h-box">장마구니</div>
+        <div class="h-box">주문하기</div>
+    </div>
+
+
+    <div id="container">
+
+        <div id="prod-pic">
+            <img src="../media/java.jpg" width="250" height="300">
+            <div id="small-img">
+                <img src="../media/java2.jpg" class="small">
+                <img src="../media/java3.jpg" class="small">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="desc">
+        <ul>
+            <li>상품명 : 자바책</li>
+            <li class="bule-txt">판매가 : </li>
+            <li>배송비 : 30,000원</li>
+            <li>(50,000,000원 이상 구매시 무료)</li>
+            <li>적립금 : 199원(0.1%)</li>
+            <li>발매일 : 2023.12.30</li>
+            <button>장바구니담기</button>
+            <a href="javascript:;" onclick="fnDetail()">상세 설명 보기</a> <!-- javascript:;대신 #은 맨 위로감-->
+        </ul>
+    </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

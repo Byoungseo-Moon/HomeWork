@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>숫자입력 : <input type="text" id="cnt"></label>
+    </div>
+    <div>
+        <button onclick="fnMake()">리스트추가</button>
+    </div>
+    <span class="material-symbols-outlined"> delete </span>
+
+    <div id="contents"></div>
+
+</body>
+
+</html>
+
+<script>
+    function fnMake() {
+        let contents = document.querySelector("#contents");
+        let cnt = document.querySelector("#cnt").value;
+        console.log(cnt);
+
+        // let ul = document.createElement("ul");
+        // contents.innerHTML = "";
+        for (let i = 1; i <= cnt; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = i;
+            // ul.appendChild(li);
+        }
+        // contents.appendChile(ul)
+
+    }
+
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        div {
+            display: block;
+            /* div의 default는 inline*/
+        }
+
+        span {
+            display: inline
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- inline : 자신 크기만큼만 차지하므로 노비 높이 지정 불가 -->
+    <!-- block : 한라인을 다 차지하고, 너비 및 높이 지정 가능 -->
+    <div class="box">box1</div>
+    <div class="box2" style="background-color: red;">box2</div>
+    <br>
+    <span class="box">box3/span>
+        <span class="box">box4</span>
+
+        <!-- inlineblock : block처럼 크기 부여 가능하고, inline처럼 자신크기만 차지하므로
+         옆으로 나란히 위치할 수 있다 -->
+
+        <span class="box">box5</span>
+        <span class="box2" style="background-color: red;">box6</span>
+
+
+</body>
+
+</html>

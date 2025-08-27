@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>텍스트 입력 : <input type="text" id="txt"></label>
+    </div>
+    <div>
+        <label>사이즈 입력 : <input type="text" id="siz"></label>
+    </div>
+    <div>
+        <label>색상 입력 : <input type="text" id="col" placeholder="red, blue, yellow..."></label>
+    </div>
+    <div>
+        <button onclick="fnCompose()">생성!</button>
+    </div>
+
+    <div id="output"> </div>
+
+
+</body>
+
+</html>
+
+<script>
+    function fnCompose() {
+        // let obj1 = document.querySelector("#num1");
+        // console.log(obj1.value);
+
+        let text = document.querySelector("#txt").value;
+        let size = document.querySelector("#siz").value;
+        let color = document.querySelector("#col").value;
+
+        let output = document.querySelector("#output");
+        output.style.color = color;
+        output.style.fontSize = size + "px";
+        output.innerHTML = text;
+
+    }
+
+
+</script>

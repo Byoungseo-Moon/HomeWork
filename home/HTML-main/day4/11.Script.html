@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <button onclick="fnText()">클릭!</button>
+    </div>
+    <div id="txt"> </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function fnText() {
+        // document.write("안녕하세요!"); // 화면에 새롭게 작성을 하므로 버튼이 사라짐
+        let obj = document.querySelector("#txt");
+        obj.innerHTML = "<h2 style='color:blue;'>안녕하세요!</h2>";   // 태그까지 동작시킴
+        // obj.innerText = "<h2안녕하세요!</h2>"; //태그로 문자로 인식
+        // obj.style.color = "blue"; // div태그에 변경
+
+    }
+</script>

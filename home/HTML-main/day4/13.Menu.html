@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-menu {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            width: 150px;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        .sub-menu {
+            background-color: antiquewhite;
+            width: 150px;
+            box-shadow: 2px 2px 2px antiquewhite;
+            display: none;
+        }
+
+        .sub-menu a {
+            display: block;
+            padding: 10px;
+            cursor: pointer;
+            /*마우스가 가면 손모양으로 바뀜*/
+
+        }
+
+        .top-menu:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu a:hover {
+            background-color: rgb(242, 199, 144);
+        }
+
+        .top-menu {
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="top-menu">
+        <div class="main-menu">Dropdown</div>
+        <div class="sub-menu">
+            <a>Menu 1</a>
+            <a>Menu 2</a>
+            <a>Menu 3</a>
+        </div>
+    </div>
+</body>
+
+</html>

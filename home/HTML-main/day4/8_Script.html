@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>첫번째 숫자 : <input type="text" id="num1"></label>
+        <!-- 입력하게 되면 input의 value=" "에 값이 저장됨 -->
+    </div>
+
+    <div>
+        <label>두번째 숫자 : <input type="text" id="num2"></label>
+    </div>
+
+    <div>
+        <button onclick="fnSum()">더하기</button>
+    </div>
+
+    <div>
+        <button onclick="fnCompare()">비교하기</button>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function fnSum() {
+        // let obj1 = document.querySelector("#num1");
+        // console.log(obj1.value);
+
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        alert(parseInt(num1) + Number(num2));
+    }
+
+    function fnCompare() {
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        // js에서 값을 비교할 때 '==', '===' 존재
+        // '=='는 타입을 무시하고 값만 비교함
+        //'==='는 타입 및 값을 같이 비교함
+        if (num1 == num2) {
+            alert("같다.")
+        } else {
+            alert("다르다.")
+        }
+    }
+
+
+
+</script>

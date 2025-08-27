@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./park1.jpg" id="img1" onclick="fnChange()" width="300" height="300">
+</body>
+
+</html>
+
+<script>
+    function fnChange() {
+        let obj = document.querySelector("#img1");
+        console.log(obj.src);
+        obj.src = "./park2.jpg";
+    }
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <label><input type="text" size="4" id=row placeholder="행숫자">행</label>
+        <label><input type="text" size="4" id=column placeholder="열숫자">열</label>
+        <button onclick="fnTable()">작성</button>
+    </div>
+
+    <div id="contents"></div>
+
+</body>
+
+</html>
+<script>
+    function fnTable() {
+        let contents = document.querySelector("#contents");
+        let row = document.querySelector("#row").value;
+        let column = document.querySelector("#column").value;
+
+        let table = document.createElement("table"); //<table></table>
+        contents.innerHTML = ""; // 작성버튼을 누르면 
+
+        for (let j = 1; j <= row; j++) {
+            let tr = document.createElement("tr"); //<tr></tr>
+            for (let i = 1; i <= column; i++) {
+                let td = document.createElement("td");//<td></td>
+                // column1.innerHTML = `${j}, ${i}`;
+                td.innerHTML = j + "," + i;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+
+        contents.appendChild(table);
+
+
+
+
+    }
+
+</script>

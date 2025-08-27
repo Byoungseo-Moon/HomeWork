@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>관심언어 :
+        <label><input type="checkbox" name="subject" value="java">자바</label>
+        <!-- // alt+shift 마우스 드래그하면 한번에 편집 가능 -->
+        <label><input type="checkbox" name="subject" value="physon">파이썬</label>
+        <label><input type="checkbox" name="subject" value="c">C</label>
+        <label><input type="checkbox" name="subject" value="c#">C#</label>
+        <label><input type="checkbox" name="subject" value="etc">기타 언어</label>
+    </div>
+
+    <div>
+        <button onclick="fnSubject()">선택된 과목 확인</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function fnSubject() {
+        let list = document.querySelectorAll("input[name='subject']:checked");
+        for (let i = 0; i < list.length; i++) {
+            console.log(list[i].value);
+        }
+
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label><input onclick="fnBook()" type="radio" name="book" value="java">자바</label>
+    </div>
+
+    <div>
+        <label><input onclick="fnBook()" type="radio" name="book" value="oracle">오라클</label>
+    </div>
+
+    <div>
+        <label><input onclick="fnBook()" type="radio" name="book" value="html">html/css/javascript</label>
+    </div>
+
+    <div>
+        <label><input onclick="fnBook()" type="radio" name="book" value="jquery">JQuery</label>
+    </div>
+
+
+    <img src="" id="image" width="300px" height="300px" style="display:none;">
+
+</body>
+
+</html>
+<script>
+    function fnBook() {
+        let book = document.querySelector("input[name='book']:checked").value;
+        let img = document.querySelector("#image");
+        img.style.display = "inline";
+        img.src = book + ".jpg"; // "파일위치 " + book + ".jpg";다시 확인 필요함
+
+        // if (book == "java") {
+        //     img.src = "java.jpg";
+        // } else if (book == "oracle") {
+        //     img.src = "oracle.jpg";
+        // } else if (book == "html") {
+        //     img.src = "html.jpg";
+        // } else if (book == "jquery") {
+        //     img.src = "jquery.jpg";
+        // }
+    }
+
+</script>

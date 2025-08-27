@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 */
+        div {
+            color: blue;
+        }
+
+        .txt {
+            font-weight: bold;
+        }
+
+        div,
+        span {
+            /* div, span위치 상관없이 다 적용됨 */
+            background-color: antiquewhite;
+        }
+
+        div span {
+            /* div 밑에 있는 모든 span에 적용됨 */
+            font-size: 30px;
+        }
+
+        div>span {
+            /* div안에 있는 바로 밑의 자식 span에게만 적용됨 */
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="txt">
+        <a><span>HTML</span></a>
+    </div>
+    <div class="txt">
+        <p>CSS</p>
+        <span>Javascript</span>
+    </div>
+    <span>JQuery</span>
+
+</body>
+
+</html>

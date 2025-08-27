@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+        /* style tag안에서와 .css파일에서 스타일 부여 방법은 여러개 */
+        /* 일단은 태그이름과 id, class로 주는 방법*/
+        div {
+            background-color: blue; 
+            color: white;
+            font-size: 20px;
+           
+        }
+
+        /* id를 이용하는 것. 이름앞에 #을 붙인다
+           id는 유니크하게 사용되어야하므로 다른 곳에 쓰면 않됨 */
+        #idAttr {
+            font-weight: bold;
+        }
+
+        /* class를 이용하는 것. 이름앞에 .을 붙인다.
+           여러번 반복해서 쓸 수 있다.*/
+        .classAttr {
+            font-size: 40px;
+            text-align: center;
+        }   
+
+    </style> 
+</head>
+<body>
+    <!-- 원하는 스타일을 구성하기 위해 css사용
+         css를 적용하는 방법은 크게 3가지 -->
+
+    <!-- 1. 확장자 .css파일에서 정의하고, html파일에서 불러씀(링크)
+            프로젝트 단위에서 범용됨
+            팀프로젝트에서 디자인의 동질성/공통성을 유지하기 위함  -->
+    
+    <!-- 2. head tag안에서 style tag로 정의 하는 방법 
+            재사용이 않되는 개별적/일회성으로 사용하는 경우-->
+
+    <!-- 3. 태그안에 직접 style속성을 부여하는 방법
+            용이한 방법이나 가독성이 떨어지고
+            프로젝트 단위에서는 조심해야 함 -->
+
+    <!-- 중복이 되는 경우 css 적용 우선 Priority 순위는 3 > 2 > 1 으로 적용됨
+         c.ss파일에서 test 클래스 이름에 속성(빨강)을 주고
+         style tag에서 test 클래스 이름에 속성(파랑)을 주고
+         test 클래스 이름을 가진 태그에 속성(노랑)을 주면
+         노랑 - 파랑 - 빨강의 순으로 적용 -->
+
+    <!-- 3. 태그안에서 직접 스타일 주는 경우 -->
+    <div style="
+                background-color: black; 
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                font-style: italic;
+                ">
+        태그안에서 직접 스타일 테스트
+    </div>
+
+    <!-- 2. style 태그안에서 스타일 주는 경우
+            div내에서 정의된 배경색 검정색이 우선하여 적용됨
+            style태그에서는 배경색 파란색임  -->
+    <div>
+        style태그로 정의한 부분 테스트(div태그에 스타일 적용)
+    </div>
+
+    <hr>
+
+    <div id="idAttr" class="classAttr">
+        style태그로 정의한 부분 테스트(id + class 스타일 적용)
+    </div>
+
+    <!-- id와는 다르게 class는 여러번 사용해도 된다. -->
+   <p class="classAttr">
+        style태그로 정의한 부분 테스트(+class 스타일 적용)
+    </p>
+
+
+
+</body>
+</html>

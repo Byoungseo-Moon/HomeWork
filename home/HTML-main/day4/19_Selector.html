@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:first-child {
+            /*부모가 있는 li중 첫번째 요소만 적용*/
+            color: red;
+        }
+
+        li:nth-child(2) {
+            color: blue;
+        }
+
+        li:nth-child(2n-1) {
+            /* 2n, 2n+1, odd, even을 쓸 수 있다.. 홀짝번 선택 가능*/
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>자바1</li>
+        <li>2자바2</li>
+        <li>자바3</li>
+        <li>4자바4</li>
+        <li>자바5</li>
+    </ol>
+
+    <ul>
+        <li>git1</li>
+        <li>UML</li>
+        <li>Figma</li>
+        <li>Javascript</li>
+        <li>JQuery</li>
+    </ul>
+</body>
+
+</html>

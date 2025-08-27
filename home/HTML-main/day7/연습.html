@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            display: grid;
+            margin: 20px auto;
+            gap: 5px;
+            grid-template-areas:
+                "img1 img1 img2"
+                "img1 img1 img3"
+                "img4 img5 img6";
+        }
+
+        .cotainer img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .img1 {
+            grid-area: img1;
+
+        }
+
+        .img2 {
+            grid-area: img2;
+
+        }
+
+        .img3 {
+            grid-area: img3;
+
+        }
+
+        .img4 {
+            grid-area: img4;
+
+        }
+
+        .img5 {
+            grid-area: img5;
+
+        }
+
+        .img6 {
+            grid-area: img6;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../media/그림1.jpg" class="img1">
+        <img src="../media/html.jpg" class="img2">
+        <img src="../media/그림4.jfif" class="img3">
+        <img src="../media/그림3.png" class="img4">
+        <img src="../media/그림파일2_실습.jpg" class="img5">
+        <img src="../media/고양이.jfif" class="img6">
+
+    </div>
+
+</body>
+
+</html>

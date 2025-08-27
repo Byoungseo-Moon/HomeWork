@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 400px;
+        }
+
+        .grad1 {
+            /* 원형그라데이션*/
+            background: green;
+            background: radial-gradient(white, yellowgreen, aqua)
+        }
+
+        .grad2 {
+            /* 원형그라데이션*/
+            background: green;
+            background: radial-gradient(circle, white, yellowgreen, aqua)
+        }
+
+        .grad3 {
+            /* 원형그라데이션*/
+            background: green;
+            background: radial-gradient(circle at 20% 50%, white, yellowgreen);
+            /* 기준 left, top으로부터*/
+        }
+
+        .grad4 {
+            /* 원형그라데이션*/
+            background: green;
+            background: radial-gradient(white, yellowgreen 20%, aqua 80%)
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="grad1"></div> -->
+    <div class="grad4"></div>
+</body>
+
+</html>

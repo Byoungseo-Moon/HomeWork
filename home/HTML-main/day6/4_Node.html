@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>과목 목록</h1>
+    <h3 id="js" class="test">자바스크립트</h3>
+    <hr>
+    <div id="list">
+        <p id="java">자바</p>
+        <p id="oracle" style="color:red;">오라클</p>
+        <p id="html">html</p>
+    </div>
+    <hr>
+    <button onclick="fnAppend()">appendChild</button> <!-- 자식요소 맨뒤에 이어붙이기-->
+    <button onclick="fnBefore()">insertBefore</button> <!-- 앞에 넣기-->
+    <button onclick="fnCreateNode()">creatElement</button>
+    <button onclick="fnCreatAttr()">creatAttribute</button> <!-- 속성만들기 -->
+    <button onclick="fnRemoveNode()">removeChild</button>
+    <button onclick="fnRemoveAttr()">removeAttribute</button>
+    <button onclick="fnCloneNode()">cloneNode</button>
+</body>
+
+</html>
+<script>
+    function fnAppend() {
+        let list = document.querySelector("#list");
+        let js = document.querySelector("#js");
+        // let js = document.getElementById("js");
+        // let js = document.getElementsByClassName("test");
+        list.appendChild(js);
+    }
+
+    function fnBefore() {
+        let list = document.querySelector("#list");
+        let js = document.getElementById("js");
+        let html = document.querySelector("#html");
+        list.insertBefore(js, html);
+        // 앞에것을 뒤의 앞에 놓겠다.
+    }
+
+    function fnCreateNode() {
+        let list = document.querySelector("#list");
+        let flutter = document.createElement("p"); //<p></p>
+        flutter.innerHTML = "flutter";//<p>flutter</p>
+        list.appendChild(flutter); // p tag중 맨 마지막에 추가됨
+    }
+
+    function fnCreatAttr() {
+        let list = document.querySelector("#list");
+        let flutter = document.createElement("p"); //<p></p>
+        flutter.innerHTML = "flutter";
+        let style = document.createAttribute("style");
+        style.value = "color: blue; font-size: 30; font-weight: bold;";
+        flutter.setAttributeNode(style); //<p style="color: blue; font-size: 30; font-weight: bold;">flutter</p>
+        list.appendChild(flutter); // p tag중 맨 마지막에 추가됨
+    }
+
+    function fnRemoveNode() {
+        let list = document.querySelector("#list");
+        let oracle = document.querySelector("#oracle");
+        list.removeChild(oracle);
+    }
+
+    function fnRemoveAttr() {
+        let oracle = document.querySelector("#oracle");
+        oracle.removeAttribute("style");
+    }
+
+    function fnCloneNode() {
+        let list = document.querySelector("#list");
+        let js = document.querySelector("#js");
+        list.appendChild(js.cloneNode(true)); // clone으로 복사 - *.cloneNode(true)
+    }
+
+
+</script>
